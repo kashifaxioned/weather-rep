@@ -1,0 +1,12 @@
+.no-result {
+  padding-top: 5rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+
+  &__close { @extend .result__close; }
+
+  &__text {
+    padding-top: 10rem;
+    @include font (2.5rem, 500);
+  }
+}

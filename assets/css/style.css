@@ -175,12 +175,12 @@ li {
 .result {
   padding: 5rem 0 0;
   animation: fadeIn 1s ease-in; }
-  .result__close {
+  .result__close, .no-result__close {
     display: block;
     text-indent: -999999px;
     color: #0078AA;
     float: right; }
-    .result__close::before {
+    .result__close::before, .no-result__close::before {
       cursor: pointer;
       content: "";
       color: inherit;
@@ -190,8 +190,9 @@ li {
       float: right;
       text-indent: 0; }
     @media screen and (min-width: 768px) {
-      .result__close:hover::before {
-        transform: scale(1.2); } }
+      .result__close:hover::before, .no-result__close:hover::before {
+        transform: scale(1.2);
+        transition: transform .3s ease-in; } }
   .result__day {
     opacity: .7; }
   .result__city {
@@ -237,3 +238,12 @@ li {
       .result__condition__item__result {
         font-size: 1.2rem;
         font-weight: 700; }
+
+.no-result {
+  padding-top: 5rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in; }
+  .no-result__text {
+    padding-top: 10rem;
+    font-size: 2.5rem;
+    font-weight: 500; }
