@@ -39,40 +39,6 @@
           </form>
         </div>
       </div>
-      <div class="result">
-        <div class="wrapper">
-          <span class="result__close">close</span>
-          <p class="result__day">Today, <span class="result__day__date">${date} ${month}</span></p>
-          <h2 class="result__city">${data.name}</h2>
-          <div class="result__img">
-            <figure ><img src="${getImage(data.weather[0].main)}" alt="${data.weather[0].main}" class="result__img__figure"></figure>
-            <h3 class="result__img__title">${data.weather[0].main}</h3>
-            <p class="result__img__info">${data.weather[0].description}</p>
-          </div>
-          <ul class="result__condition">
-            <li class="result__condition__item result__condition__item--temp">
-              <p class="result__condition__item__title">temp</p>
-              <span class="result__condition__item__result">${data.main.temp}</span>
-            </li>
-            <li class="result__condition__item result__condition__item--feels-like">
-              <p class="result__condition__item__title">feels like</p>
-              <span class="result__condition__item__result">${data.main.feels_like}</span>
-            </li>
-            <li class="result__condition__item result__condition__item--humidity">
-              <p class="result__condition__item__title">humidity</p>
-              <span class="result__condition__item__result">${data.main.humidity}</span>
-            </li>
-            <li class="result__condition__item result__condition__item--wind">
-              <p class="result__condition__item__title">wind</p>
-              <span class="result__condition__item__result">${data.wind.speed} ${data.wind.deg}</span>
-            </li>
-            <li class="result__condition__item result__condition__item--pressure">
-              <p class="result__condition__item__title">pressure</p>
-              <span class="result__condition__item__result">${data.main.pressure}</span>
-            </li>
-          </ul>
-        </div>
-      </div>
     </main>
     <!--main section end-->
 
