@@ -23,13 +23,53 @@
   <!--container start-->
   <div class="container">
     <!--header section start-->
-    <header>
-      
+    <header class="header">
+      <div class="wrapper">
+        <h1 class="header__logo"><a href="index.html" title="Home">Weather-rep</a></h1>
+      </div>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
-
+      <div class="home">
+        <div class="wrapper">
+          <form action="/" class="home__form">
+            <div class="home__form__inp"><input class="home__form__inp__field" type="text" name="search-inp" placeholder="Enter your city.." autocomplete="off"></div>
+            <div class="home__form__add"><button class="home__form__add__btn" type="submit">search</button></div>
+          </form>
+          <div class="home__result">
+            <p class="home__result__day">Today, <span class="home__result__day__date">19 July</span></p>
+            <span class="home__result__city">mumbai</span>
+            <div class="home__result__img">
+              <figure ><img src="./assets/Images/conditions/clear.png" alt="clear" class="home__result__figure"></figure>
+              <h2 class="home__result__img__title">clear</h2>
+              <p class="home__result__img__info">clear sky</p>
+            </div>
+            <ul class="home__result__condition">
+              <li class="home__result__condition__item home__result__condition--temp">
+                <p class="home__result__condition__item__title">temp</p>
+                <span class="home__result__condition__item__result">100</span>
+              </li>
+              <li class="home__result__condition__item home__result__condition--feels-like">
+                <p class="home__result__condition__item__title">feels like</p>
+                <span class="home__result__condition__item__result">100</span>
+              </li>
+              <li class="home__result__condition__item home__result__condition--humidity">
+                <p class="home__result__condition__item__title">humidity</p>
+                <span class="home__result__condition__item__result">100</span>
+              </li>
+              <li class="home__result__condition__item home__result__condition--wind">
+                <p class="home__result__condition__item__title">wind</p>
+                <span class="home__result__condition__item__result">100</span>
+              </li>
+              <li class="home__result__condition__item home__result__condition--pressure">
+                <p class="home__result__condition__item__title">pressure</p>
+                <span class="home__result__condition__item__result">100</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
     <!--main section end-->
 
