@@ -1,0 +1,50 @@
+.result {
+  padding: 5rem 0 0;
+  animation: fadeIn 1s ease-in;
+
+  &__day { opacity: .7; }
+
+  &__city {
+    text-transform: capitalize;
+    @include font (1.8rem, 600)
+  }
+
+  &__img {
+    padding-top: 5rem;
+    @include flexBox (column, auto, auto, false );
+
+    &__figure { width: inherit; }
+
+    &__title {
+      align-self: flex-start;
+      text-transform: capitalize;
+      @include font (2.4rem, 600);
+    }
+
+    &__info {
+      align-self: flex-start;
+      @include font (1rem, 500)
+    }
+  }
+
+  &__condition {
+    padding-top: 5rem;
+    @include flexBox (auto, space-between, center, true);
+
+    &__item {
+      padding: 1rem 0;
+      border-radius: 20px;
+      flex-basis: calc(20% - 2rem);
+      background-color: $primary-color;
+      text-align: center;
+
+      &__title {
+        padding-bottom: 10px;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+
+      &__result { @include font (1.2rem, 700); }
+    }
+  }
+}

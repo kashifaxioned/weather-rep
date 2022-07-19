@@ -1,0 +1,9 @@
+.header {
+  padding: 1rem 0;
+  background-color: $secondary-color;
+  color: $primary-color;
+
+  &__logo {
+    @include font (2rem, 500)
+  }
+}

@@ -1,0 +1,29 @@
+.home {
+  height: 92vh;
+  background: url(/assets/Images/bg.jpg) center no-repeat;
+  background-size: cover;
+
+  &__form {
+    padding-top: 15rem;
+    @include flexBox (auto, center, center, false);
+    gap: 5rem;
+
+    &__inp {
+
+      &__field {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid $secondary-color;
+        background: none;
+        outline: none;   
+        @include font (1.6rem, 500)     
+      }
+    }
+
+    &__add {
+
+      &__btn { @include icon-btn("\f002", 17px, 14px, 17px, 14px); }
+    }
+  }
+}
