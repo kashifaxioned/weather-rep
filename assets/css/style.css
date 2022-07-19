@@ -132,7 +132,8 @@ li {
 .home {
   height: 92vh;
   background: url(/assets/Images/bg.jpg) center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  animation: fadeIn 1s ease-in; }
   .home__form {
     padding-top: 15rem;
     display: flex;
