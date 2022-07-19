@@ -23,6 +23,7 @@
 
     &__info {
       align-self: flex-start;
+      text-transform: capitalize;
       @include font (1rem, 500)
     }
   }
