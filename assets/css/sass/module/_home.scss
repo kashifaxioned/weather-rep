@@ -23,7 +23,25 @@
 
     &__add {
 
-      &__btn { @include icon-btn("\f002", 17px, 14px, 17px, 14px); }
+      &__btn {
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        color: $primary-color;
+        cursor: pointer;
+        text-indent: -999999px;
+      
+        &::before {
+          padding: 17px 14px;
+          @include icon ("\f002", 1.3rem, 500, $primary-color); }
+        
+        @include breakpoint(min-ipad) {
+          &:hover {
+            background-color: transparent;
+            color: $secondary-color;
+          }
+        } 
+      }
     }
   }
 }

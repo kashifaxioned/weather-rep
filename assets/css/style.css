@@ -158,9 +158,9 @@ li {
       cursor: pointer;
       text-indent: -999999px; }
       .home__form__add__btn::before {
-        padding: 17px 14px 17px 14px;
+        padding: 17px 14px;
         content: "";
-        color: inherit;
+        color: #FCF8E8;
         font-family: "FontAwesome";
         font-size: 1.3rem;
         font-weight: 500;
@@ -174,6 +174,23 @@ li {
 .result {
   padding: 5rem 0 0;
   animation: fadeIn 1s ease-in; }
+  .result__close {
+    display: block;
+    text-indent: -999999px;
+    color: #0078AA;
+    float: right; }
+    .result__close::before {
+      cursor: pointer;
+      content: "";
+      color: inherit;
+      font-family: "FontAwesome";
+      font-size: 2rem;
+      font-weight: 100;
+      float: right;
+      text-indent: 0; }
+    @media screen and (min-width: 768px) {
+      .result__close:hover::before {
+        transform: scale(1.2); } }
   .result__day {
     opacity: .7; }
   .result__city {

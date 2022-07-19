@@ -1,31 +1,12 @@
-@mixin icon ($content, $top, $right, $bottom, $left) {
-  padding:  $top $right $bottom $left;
+@mixin icon ($content, $size, $weight, $color) {
   content: $content;
-  color: inherit;
+  color: $color;
   font-family: "FontAwesome";
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: $size;
+  font-weight: $weight;
   float: right;
   text-indent: 0;
 } 
-
-@mixin icon-btn ($content, $top, $right, $bottom, $left) {
-  border: 1px solid $secondary-color;
-  border-radius: 50%;
-  background-color: $secondary-color;
-  color: $primary-color;
-  cursor: pointer;
-  text-indent: -999999px;
-
-  &::before { @include icon ($content, $top, $right, $bottom, $left); }
-  
-  @include breakpoint(min-ipad) {
-    &:hover {
-      background-color: transparent;
-      color: $secondary-color;
-    }
-  }
-}
 
 @mixin flexBox ($flex-direction, $justify-content, $align-items, $wrap) {
   display: flex;

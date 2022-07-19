@@ -2,6 +2,24 @@
   padding: 5rem 0 0;
   animation: fadeIn 1s ease-in;
 
+  &__close {
+    display: block;
+    text-indent: -999999px;
+    color: $secondary-color;
+    float: right;
+
+    &::before {
+      cursor: pointer;
+      @include icon ("\f00d", 2rem, 100, inherit);
+    }
+
+    @include breakpoint (min-ipad) {
+      &:hover::before {
+       transform: scale(1.2);
+      }
+    }
+  }
+
   &__day { opacity: .7; }
 
   &__city {
