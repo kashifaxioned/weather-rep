@@ -161,7 +161,7 @@ li {
       .home__form__add__btn::before {
         padding: 17px 14px;
         content: "";
-        color: #FCF8E8;
+        color: inherit;
         font-family: "FontAwesome";
         font-size: 1.3rem;
         font-weight: 500;

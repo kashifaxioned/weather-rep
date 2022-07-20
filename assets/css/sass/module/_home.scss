@@ -34,7 +34,7 @@
       
         &::before {
           padding: 17px 14px;
-          @include icon ("\f002", 1.3rem, 500, $primary-color); }
+          @include icon ("\f002", 1.3rem, 500, inherit); }
         
         @include breakpoint(min-ipad) {
           &:hover {
