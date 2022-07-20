@@ -11,7 +11,7 @@ const month = today.toLocaleString('default', { month: 'long' })
 form.addEventListener("submit", function (e) { handleSubmit (e) });
 
 // function for form submit
-function handleSubmit (e) {
+const handleSubmit = (e) => {
   e.preventDefault();
   const searchVal =  form.elements[0].value;
   validation(searchVal);
@@ -19,7 +19,7 @@ function handleSubmit (e) {
 }
 
 // function for  form validation
-function validation (x) {
+const validation = (x) => {
   const alphaRegEx = /^[A-Za-z]+$/;
   if(x !== '' && x.match(alphaRegEx) ) { getResult(x); }
   else { alert ("Please enter proper name"); }
@@ -36,23 +36,22 @@ async function getResult (city) {
     search.classList.add("hide");
     notFound(result);
   }
- 
 }
 
 // function for getting image according to weather
-function getImage(img) {
-  if (img === 'Clouds') return './assets/Images/conditions/cloudy.png'
-  if (img === 'Rain') return './assets/Images/conditions/rainy.png'
-  if (img === 'Sunny') return './assets/Images/conditions/sunny.png'
-  if (img === 'Clear') return './assets/Images/conditions/clear.png'
-  if (img === 'Mist') return './assets/Images/conditions/mist.png'
-  if (img === "Smoke") return './assets/Images/conditions/smoke.png'
-  if (img === "drizzle") return './assets/Images/conditions/drizzle.png'
-  return './assets/Images/conditions/clear.png'
+const getImage = (img) => {
+  if (img === 'Clouds') return './assets/Images/conditions/cloudy.png';
+  if (img === 'Rain') return './assets/Images/conditions/rainy.png';
+  if (img === 'Sunny') return './assets/Images/conditions/sunny.png';
+  if (img === 'Clear') return './assets/Images/conditions/clear.png';
+  if (img === 'Mist') return './assets/Images/conditions/mist.png';
+  if (img === "Smoke") return './assets/Images/conditions/smoke.png';
+  if (img === "drizzle") return './assets/Images/conditions/drizzle.png';
+  return './assets/Images/conditions/clear.png';
 }
 
 // function for displaying result
-function showResult(data) {
+const showResult = (data) => {
   const result = document.createElement("div");
   result.classList.add("result");
   result.innerHTML = `<div class="wrapper">
@@ -79,7 +78,7 @@ function showResult(data) {
     </li>
     <li class="result__condition__item result__condition__item--wind">
       <p class="result__condition__item__title">wind</p>
-      <span class="result__condition__item__result">${data.wind.speed} ${data.wind.deg}</span>
+      <span class="result__condition__item__result">${data.wind.speed}m/s ${data.wind.deg}&#176;</span>
     </li>
     <li class="result__condition__item result__condition__item--pressure">
       <p class="result__condition__item__title">pressure</p>
@@ -97,7 +96,7 @@ function showResult(data) {
 }
 
 // function for no result found
-function notFound () {
+const notFound = () => {
   const noResult = document.createElement("div");
   noResult.classList.add("no-result");
 
